@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - LessonBlazer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9800, #2196f3, #4caf50, #e91e63);
+            background-size: 300% 300%;
+            animation: gradientBackground 15s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p, li {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .nav-button {
+            padding: 10px 20px;
+            border: none;
+            background: #ffffff;
+            color: #000000;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2196f3;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FAQ - LessonBlazer</h1>
+        <h2>1. Reporting a Subject</h2>
+        <p>
+            You can report a subject directly from the main screen by selecting the subject and using the "Report" option. Note that reporting a subject does not automatically remove it. If you wish to remove a reported subject, you can manually remove it from the main screen.
+        </p>
+
+        <h2>2. Course Quota</h2>
+        <p>
+            Each course you add or create in the search page deducts one quota from your account. When you sign up, you receive a free quota balance. The LessonBlazer team reserves the right to adjust the amount of free quota at any time.
+        </p>
+
+        <h2>3. Purchased Courses</h2>
+        <p>
+            When you purchase a course, it is recorded under your logged-in user account. If you add a previously purchased course after removing it, or on another device using the same account, no quota will be deducted.
+        </p>
+
+        <h2>4. Buying Additional Quota</h2>
+        <p>
+            You can purchase additional quota by using the "Buy Quota" option available in the user menu on the main screen. The LessonBlazer team reserves the right to adjust prices and quota amounts for purchases at any time.
+        </p>
+
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="window.location.href='index.html'">Back to Support</button>
+        </div>
+    </div>
+</body>
+</html>
