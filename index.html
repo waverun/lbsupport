@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LessonBlazer Support1</title>
+  <title>LessonBlazer Support</title>
   <style>
     body {
       margin: 0;
@@ -57,18 +57,6 @@
 
     .gradient-controls {
       margin: 20px 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .gradient-controls input[type="color"] {
-      width: 50px;
-      height: 50px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
     }
 
     .gradient-controls button {
@@ -117,13 +105,6 @@
 
   <section class="gradient-controls">
     <h2>Customize Background</h2>
-    <div id="rectangle" style="width: 100px; height: 100px; background: #ff7f50; border-radius: 8px;"></div>
-    <div>
-      <input type="color" id="color1" value="#ff7f50">
-      <input type="color" id="color2" value="#87cefa">
-      <input type="color" id="color3" value="#dda0dd">
-      <input type="color" id="color4" value="#32cd32">
-    </div>
     <button id="updateGradient">Update Gradient</button>
   </section>
 
@@ -132,60 +113,18 @@
   </footer>
 
   <script>
-    let userUpdated = false;
-    const colorPickers = [
-      document.getElementById('color1'),
-      document.getElementById('color2'),
-      document.getElementById('color3'),
-      document.getElementById('color4')
-    ];
-
-    const rectangle = document.getElementById('rectangle');
-
-    colorPickers.forEach((picker, index) => {
-      picker.addEventListener('input', () => {
-        userUpdated = true;
-        updateRectangleColor();
-      });
-    });
-
-    function updateRectangleColor() {
-      const gradient = `linear-gradient(to bottom right, 
-        ${colorPickers[0].value}, 
-        ${colorPickers[1].value}, 
-        ${colorPickers[2].value}, 
-        ${colorPickers[3].value})`;
-
-      rectangle.style.background = gradient;
-    }
-
     document.getElementById('updateGradient').addEventListener('click', () => {
-      if (userUpdated) {
-        const gradient = `linear-gradient(to bottom right, 
-          ${colorPickers[0].value}, 
-          ${colorPickers[1].value}, 
-          ${colorPickers[2].value}, 
-          ${colorPickers[3].value})`;
+      const randomColors = Array.from({ length: 4 }, () =>
+        `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`
+      );
 
-        document.body.style.background = gradient;
-        userUpdated = false;
-      } else {
-        const randomColors = Array.from({ length: 4 }, () =>
-          `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`
-        );
-        randomColors.forEach((color, index) => {
-          colorPickers[index].value = color;
-        });
+      const randomGradient = `linear-gradient(to bottom right, 
+        ${randomColors[0]}, 
+        ${randomColors[1]}, 
+        ${randomColors[2]}, 
+        ${randomColors[3]})`;
 
-        const randomGradient = `linear-gradient(to bottom right, 
-          ${randomColors[0]}, 
-          ${randomColors[1]}, 
-          ${randomColors[2]}, 
-          ${randomColors[3]})`;
-
-        document.body.style.background = randomGradient;
-        rectangle.style.background = randomGradient;
-      }
+      document.body.style.background = randomGradient;
     });
   </script>
 </body>
