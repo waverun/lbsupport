@@ -58,9 +58,9 @@
     .gradient-controls {
       margin: 20px 0;
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 10px;
     }
 
     .gradient-controls input[type="color"] {
@@ -118,10 +118,12 @@
   <section class="gradient-controls">
     <h2>Customize Background</h2>
     <div id="rectangle" style="width: 100px; height: 100px; background: #ff7f50; border-radius: 8px;"></div>
-    <input type="color" id="color1" value="#ff7f50">
-    <input type="color" id="color2" value="#87cefa">
-    <input type="color" id="color3" value="#dda0dd">
-    <input type="color" id="color4" value="#32cd32">
+    <div>
+      <input type="color" id="color1" value="#ff7f50">
+      <input type="color" id="color2" value="#87cefa">
+      <input type="color" id="color3" value="#dda0dd">
+      <input type="color" id="color4" value="#32cd32">
+    </div>
     <button id="updateGradient">Update Gradient</button>
   </section>
 
@@ -142,18 +144,30 @@
 
     colorPickers.forEach((picker, index) => {
       picker.addEventListener('input', () => {
-        rectangle.style.background = picker.value;
         userUpdated = true;
+        updateRectangleColor();
       });
     });
 
+    function updateRectangleColor() {
+      const gradient = `linear-gradient(to bottom right, 
+        ${colorPickers[0].value}, 
+        ${colorPickers[1].value}, 
+        ${colorPickers[2].value}, 
+        ${colorPickers[3].value})`;
+
+      rectangle.style.background = gradient;
+    }
+
     document.getElementById('updateGradient').addEventListener('click', () => {
       if (userUpdated) {
-        document.body.style.background = `linear-gradient(to bottom right, 
+        const gradient = `linear-gradient(to bottom right, 
           ${colorPickers[0].value}, 
           ${colorPickers[1].value}, 
           ${colorPickers[2].value}, 
           ${colorPickers[3].value})`;
+
+        document.body.style.background = gradient;
         userUpdated = false;
       } else {
         const randomColors = Array.from({ length: 4 }, () =>
@@ -163,11 +177,14 @@
           colorPickers[index].value = color;
         });
 
-        document.body.style.background = `linear-gradient(to bottom right, 
+        const randomGradient = `linear-gradient(to bottom right, 
           ${randomColors[0]}, 
           ${randomColors[1]}, 
           ${randomColors[2]}, 
           ${randomColors[3]})`;
+
+        document.body.style.background = randomGradient;
+        rectangle.style.background = randomGradient;
       }
     });
   </script>
