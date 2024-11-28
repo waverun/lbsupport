@@ -1,131 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LessonBlazer Support</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #ff7f50, #87cefa, #dda0dd, #32cd32);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: center;
-      color: #fff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LessonBlazer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4caf50, #2196f3, #ff9800, #e91e63);
+            background-size: 300% 300%;
+            animation: gradientBackground 15s ease infinite;
+            color: white;
+        }
 
-    header {
-      margin-top: 20px;
-    }
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-    h1 {
-      margin-bottom: 10px;
-    }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    .icon {
-      width: 120px;
-      height: 120px;
-      margin: 10px auto;
-    }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 8px;
-    }
+        p, li {
+            line-height: 1.6;
+        }
 
-    .faq, .privacy-policy {
-      margin: 10px 0;
-    }
+        ul {
+            padding-left: 20px;
+        }
 
-    .faq a, .privacy-policy a {
-      color: #3399ff; /* Updated blue color for better contrast */
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .button {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+        }
 
-    footer {
-      margin: 20px;
-    }
+        a {
+            text-decoration: none;
+            color: #2196f3;
+            font-weight: bold;
+        }
 
-    .gradient-controls {
-      margin: 20px 0;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .gradient-controls button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
 
-    .gradient-controls button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        .nav-button {
+            padding: 10px 20px;
+            border: none;
+            background: #ffffff;
+            color: #000000;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>LessonBlazer Support Page</h1>
-    <img class="icon" src="app-icon.png" alt="LessonBlazer Icon">
-  </header>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p>
+            Your privacy is important to us. This privacy policy explains how LessonBlazer collects, uses, and protects your information.
+        </p>
 
-  <section>
-    <h2>About LessonBlazer</h2>
-    <p>
-      LessonBlazer is your ultimate tool for creating courses on any subject. Just provide a course subject, 
-      and the app uses ChatGPT to generate comprehensive course materials and tests. 
-      Learn, grow, and explore effortlessly with LessonBlazer.
-    </p>
-  </section>
+        <h2>Information We Collect</h2>
+        <ul>
+            <li>Information you provide when using the app, such as course subjects or preferences.</li>
+            <li>Device information like operating system, app version, and crash data to improve the app experience.</li>
+            <li>No personal information is shared or sold to third parties.</li>
+        </ul>
 
-  <section>
-    <h2>FAQ</h2>
-    <p class="faq">
-      <a href="faq.html">View Frequently Asked Questions</a>
-    </p>
-  </section>
+        <h2>How We Use Your Information</h2>
+        <p>
+            We use the information collected to:
+        </p>
+        <ul>
+            <li>Generate and improve course content based on your preferences.</li>
+            <li>Maintain app functionality and performance.</li>
+            <li>Enhance user experience by personalizing features.</li>
+        </ul>
 
-  <section>
-    <h2>Privacy Policy</h2>
-    <p class="privacy-policy">
-      <a href="privacy-policy.html">Read Our Privacy Policy</a>
-    </p>
-  </section>
+        <h2>Third-Party Services</h2>
+        <p>
+            LessonBlazer integrates with third-party services like OpenAI for generating course content. These services are governed by their respective privacy policies.
+        </p>
 
-  <section class="gradient-controls">
-    <h2>Customize Background</h2>
-    <button id="updateGradient">Update Gradient</button>
-  </section>
+        <h2>Data Retention</h2>
+        <p>
+            We retain your data only for as long as necessary to provide you with the services. You may request deletion of your data at any time.
+        </p>
 
-  <footer>
-    <p>&copy; 2024 LessonBlazer. All rights reserved.</p>
-  </footer>
+        <h2>Your Rights</h2>
+        <p>
+            You have the right to access, modify, or delete your data. For any privacy concerns, please contact us at <a href="mailto:support@lessonblazer.com">support@lessonblazer.com</a>.
+        </p>
 
-  <script>
-    document.getElementById('updateGradient').addEventListener('click', () => {
-      const randomColors = Array.from({ length: 4 }, () =>
-        `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`
-      );
-
-      const randomGradient = `linear-gradient(to bottom right, 
-        ${randomColors[0]}, 
-        ${randomColors[1]}, 
-        ${randomColors[2]}, 
-        ${randomColors[3]})`;
-
-      document.body.style.background = randomGradient;
-    });
-  </script>
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="window.location.href='index.html'">Back to Support</button>
+        </div>
+    </div>
 </body>
 </html>
